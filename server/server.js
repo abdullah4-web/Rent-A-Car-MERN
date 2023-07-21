@@ -4,7 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
-import seedRouter from './routes/saeedRoutes.js';
+
 import userRouter from './routes/userRoutes.js';
 import carRouter from './routes/carRoutes.js';
 import bookingRouter from './routes/bookingRoutes.js';
@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Set up the routes
-app.use('/api/seed', seedRouter);
+
 app.use('/api/users', userRouter);
 app.use('/api/cars', carRouter);
 app.use('/api/bookings', bookingRouter);
