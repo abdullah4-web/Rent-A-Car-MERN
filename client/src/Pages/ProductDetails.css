@@ -1,0 +1,131 @@
+.container {
+  border: none;
+  border-radius: none;
+  text-align: justify;
+}
+
+.product-header {
+  padding-left: 40px;
+}
+
+.product-info {
+  padding-right: 70px;
+  padding-top: 14px;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+.product-info .description {
+  position: relative;
+}
+
+.product-info .description::after {
+  content: '.';
+  font-size: 0;
+  display: block;
+  border-radius: 20px;
+  height: 6px;
+  width: 55%;
+  background: orangered;
+  margin: 14px 0;
+}
+
+.product-details {
+  padding-left: 25px;
+}
+
+.product-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-details ul li {
+  line-height: 1.5;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.product-details label {
+  margin-right: 10px;
+}
+
+.product-details .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust input field width */
+.product-details input {
+  width: 180px;
+  max-width: 100%;
+}
+
+/* Center the button */
+.product-details .book-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.book-button {
+  border-radius: 0;
+  border: 2px solid orangered;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 300px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 98%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .product-info .description::after {
+    content: '.';
+    font-size: 0;
+    display: block;
+    border-radius: 20px;
+    height: 6px;
+    width: 35%;
+    background: orangered;
+    margin: 10px auto;
+  }
+
+  .product-info {
+    text-align: center;
+    margin: 0 30px;
+  }
+
+  .product-header {
+    text-align: center;
+    padding-left: 90px;
+    padding-top: 10px;
+  }
+
+  .product-details {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 40px;
+    justify-content: center;
+  }
+
+  .product-details ul li {
+    text-align: center;
+  }
+
+  .book-button {
+    text-align: center;
+  }
+}
