@@ -24,7 +24,9 @@ const app = express();
 
 // Enable CORS
 app.use(cors());
-
+app.get('/', (req, res) => {
+  res.json({ message: "API is working" });
+});
 // Parse JSON bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
